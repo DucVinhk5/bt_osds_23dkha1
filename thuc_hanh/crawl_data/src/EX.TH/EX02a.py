@@ -42,7 +42,7 @@ for k in range (10):
         print(f"Lỗi: {e}")
 
 # Nhấn phím mũi tên xuống nhiều lần để cuộn xuống từ từ
-for i in range(50):  # Lặp 50 ần, mỗi lần cuộn xuống một ít
+for i in range(50):  # Lặp 50 lần, mỗi lần cuộn xuống một ít
     body.send_keys(Keys.ARROW_DOWN)
     time.sleep(0.01)  # Tạm dừng 0.1 giây giữa mỗi lần cuộn để trang tải nội dung
 

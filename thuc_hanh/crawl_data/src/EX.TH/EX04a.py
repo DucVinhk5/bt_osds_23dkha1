@@ -11,16 +11,20 @@ url = 'https://www.reddit.com/login/'
 
 # Truy cập
 driver.get(url)
-time.sleep(3)
+time.sleep(2)
 
 # Nhap thong tin nguoi dung
-my_email = input('Please provide your email:')
-my_password = getpass.getpass('Please provide your password:')
+my_email = "11a4.phanxuanduong@gmail.com"
+my_password = "Duongtrum1"
 
 
 actionChains = ActionChains(driver)
-time.sleep(1)
-for i in range(5):
+sleep = True
+while sleep:
+    if input("enter: ") == 'Y':
+        break
+
+for i in range(7):
     actionChains.key_down(Keys.TAB).perform()
     
 actionChains.send_keys(my_email).perform()
@@ -28,6 +32,10 @@ actionChains.key_down(Keys.TAB).perform()
 
 actionChains.send_keys(my_password + Keys.ENTER).perform()
 
+for i in range(3):
+    actionChains.key_down(Keys.TAB).perform()
+
+actionChains.key_down(Keys.ENTER).perform()
 time.sleep(5)
 
 
@@ -54,9 +62,6 @@ for i in range(2):
     time.sleep(3)
 
 actionChains.send_keys(Keys.ENTER).perform()
-
-
-time.sleep(120)
 driver.quit()
 
 
